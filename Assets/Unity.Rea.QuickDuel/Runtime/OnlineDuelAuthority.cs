@@ -1,7 +1,7 @@
 using System;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // Online play: this machine plays its own seat's round on its own clock, and the result it shows is the host's
     // verdict, never its own local round's, which saw one side only (UQD-T21).

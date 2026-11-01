@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel.Online
+namespace Unity.Rea.QuickDuel.Online
 {
     // The Duel scene's Host / Join menu (UQD-T21): a small panel at the left edge, under the left score, built in
     // code on DuelView's UI Toolkit tree (UQD-T31), shown between rounds. Host starts a listen server on the scene's

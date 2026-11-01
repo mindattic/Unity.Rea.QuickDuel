@@ -1,6 +1,6 @@
 {
     "name": "Unity.Rea.QuickDuel.PlayMode.Tests",
-    "rootNamespace": "Unity.QuickDuel.Tests",
+    "rootNamespace": "Unity.Rea.QuickDuel.Tests",
     "references": [
         "Unity.Rea.QuickDuel.Core",
         "Unity.Rea.QuickDuel.Runtime",

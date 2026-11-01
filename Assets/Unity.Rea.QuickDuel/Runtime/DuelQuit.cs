@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // Escape in the duel, as obj_game had it (UQD-T65): room_goto(characterselect) at any moment, mid-round too. The
     // character select is dropped, and it stood between the main menu and the duel, so the duel leaves for the main menu

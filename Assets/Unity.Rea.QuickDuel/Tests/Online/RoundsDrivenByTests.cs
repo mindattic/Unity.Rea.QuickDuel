@@ -1,5 +1,5 @@
 using NUnit.Framework;
-using Unity.QuickDuel;
+using Unity.Rea.QuickDuel;
 
 // Outside any namespace, so it covers every fixture in this assembly: the Duel scenes these tests load have their rounds
 // begun by the tests themselves (controller.BeginRound, a strike key, the online host), so a scene's startup does not

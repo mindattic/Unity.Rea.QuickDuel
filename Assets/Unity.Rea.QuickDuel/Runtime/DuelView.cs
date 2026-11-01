@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // Draws the duel from the controller's phase and result; it never decides anything. The whole UI is
     // built in code (the original fighters over the original arena art) on UI Toolkit (UQD-T31): a UIDocument reads

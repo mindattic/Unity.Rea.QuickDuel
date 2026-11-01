@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The intro (UQD-T44), the game's first scene, as the original's intro room drew it (IntroScene): bg_mapscreen under
     // twelve clouds drifting left a pixel a step at half alpha and wrapping back in from the right, the story typed out

@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // How the countdown is drawn (UQD-T37), as obj_gameclock's draw event and gameclock_countdown.gml have it. Every
     // figure is the original's own, read from BushidoCoda.gmx, not a tuning choice:

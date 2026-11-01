@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // Where and how the two fighters stand before the cue (UQD-T34), as the original's globals.gml, obj_game and
     // obj_player have it. Engine-free numbers only; DuelView turns them into its stage. Every figure here is the

@@ -2,9 +2,9 @@ using System;
 using System.IO;
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The original's type (UQD-T36): each kind of text in the original's font and outline, draw_text_outline's
     // offsets in its own order, and the five shipped glyph tables read whole.

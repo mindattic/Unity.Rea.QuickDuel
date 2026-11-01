@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The 2013 GameMaker build's sound beats: a beep on each of 3-2-1, a drumroll through the standoff,
     // the blade unsheathed on the cue, a slash when a strike settles the round, then determine_winner.gml's

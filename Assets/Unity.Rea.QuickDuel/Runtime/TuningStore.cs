@@ -1,8 +1,8 @@
 using System.IO;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The game's tuning registry as loaded from the build's data file (StreamingAssets/Settings/tuning.json,
     // read by Core's TuningRegistry through a DirectorySettingsSource). Loaded once, on first use; a file that

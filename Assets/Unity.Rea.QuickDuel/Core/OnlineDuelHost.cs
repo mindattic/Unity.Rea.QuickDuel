@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The host's half of an online match. Each round it draws the countdown and standoff lengths and hands them out
     // (RoundBegan); each client runs the round on its own clock, times its own reaction from its own cue and reports

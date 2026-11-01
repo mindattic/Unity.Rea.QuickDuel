@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // Whether the player is typing into a text field (the online menu's address, UQD-T21), so the duel's own
     // keys -- Space and the Ctrl keys to strike (and the host's Space for the next round) -- leave the keystroke to the field.

@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // What a fighter is doing (UQD-T35), as obj_player's `state` has it.
     public enum FighterPose

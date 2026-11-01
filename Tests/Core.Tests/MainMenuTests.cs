@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The main menu room (UQD-T45): obj_btn_newgame, _versus and _quit with their flick and click, the difficulty in the
     // Options slot, bg_splatter_scroll's scroll and obj_fade_mainmenu's fade, stepped at the original's 60 a second.

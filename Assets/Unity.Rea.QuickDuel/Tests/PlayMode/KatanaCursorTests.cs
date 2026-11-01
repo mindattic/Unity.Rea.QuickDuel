@@ -7,7 +7,7 @@ using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // obj_mouse (UQD-T46): spr_katana_cursor replaces the system cursor in the main menu and the duel, its tip at the
     // pointer, drawn at the original's pixel scale over the room and under the letterbox and loading fades, and hidden

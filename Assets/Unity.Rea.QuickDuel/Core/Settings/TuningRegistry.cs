@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The settings registry: every tuning number of the duel, loaded from Settings/tuning.json (StreamingAssets
     // in a build) through an ISettingsSource and validated on load, so no number is hard-coded in behaviour.

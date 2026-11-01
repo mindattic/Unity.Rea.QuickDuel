@@ -1,6 +1,6 @@
 using System.Collections;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -8,7 +8,7 @@ using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // The original's F12 debug overlay as the developer's toggle (UQD-T50): off at the start, F12 turns it on and off in
     // the editor and development builds, and it shows each side's reaction where obj_game drew it.

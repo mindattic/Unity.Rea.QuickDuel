@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // obj_cornerart_left and obj_cornerart_right sliding in on start (UQD-T43).
     public class CornerArtTests

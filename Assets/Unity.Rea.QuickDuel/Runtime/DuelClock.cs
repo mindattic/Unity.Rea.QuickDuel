@@ -1,8 +1,8 @@
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The match clock (UQD-T50), as obj_time drew it (RoundClock): "mm:ss" in fnt_basic outlined 1, white, at the top
     // centre of the room, the minutes ending 3 pixels left of the middle, the colon centred on it and the seconds starting

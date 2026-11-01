@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The tuning registry (UQD-T28): the shipped file loads with the original's figures, named profiles are
     // chosen by name, and a bad file reports every problem by file, key and line.

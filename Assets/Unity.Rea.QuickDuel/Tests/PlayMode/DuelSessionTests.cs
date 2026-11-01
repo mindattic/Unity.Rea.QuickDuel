@@ -1,12 +1,12 @@
 using System.Collections;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using UnityEngine.TestTools;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     public class DuelSessionTests
     {

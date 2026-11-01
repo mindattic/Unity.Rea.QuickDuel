@@ -1,11 +1,11 @@
 using System;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The match verdict (UQD-T48), as the original's victory and gameover rooms (VerdictScreen): once a round has ended
     // the match and the loading fade's image is full over the reset battle, the duel cuts to bg_victory or bg_gameover,

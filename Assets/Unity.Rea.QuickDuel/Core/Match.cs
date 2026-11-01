@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The read-only side of a Match: wins, the verdict and best reactions, with no way to Record a round.
     // MatchSession hands this out (DuelSession.Match) so a view can read the score without being able to

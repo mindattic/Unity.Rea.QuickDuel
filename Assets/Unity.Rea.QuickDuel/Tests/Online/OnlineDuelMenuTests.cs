@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
-namespace Unity.QuickDuel.Online.Tests
+namespace Unity.Rea.QuickDuel.Online.Tests
 {
     public class OnlineDuelMenuTests
     {
@@ -51,7 +51,7 @@ namespace Unity.QuickDuel.Online.Tests
         [UnityTest]
         public IEnumerator HostPutsTheSceneOnline_AndLeaveTakesItBack()
         {
-            Unity.QuickDuel.Tests.Screenshots.Capture("online-menu");
+            Unity.Rea.QuickDuel.Tests.Screenshots.Capture("online-menu");
             bootstrap.Configure(c => c.Port = FreePort.Udp());
             Assert.That(menu.Host(), Is.True, menu.StatusText);
             yield return NetAwait.Until(() => controller.IsOnline, () => "the scene never went online: " + menu.StatusText);
@@ -60,7 +60,7 @@ namespace Unity.QuickDuel.Online.Tests
             yield return null;
             Assert.That(menu.StatusText, Does.StartWith("Hosting on port"));
             Assert.That(Object.FindAnyObjectByType<DuelView>().PromptText, Does.Contain("Waiting for a player to join"));
-            Unity.QuickDuel.Tests.Screenshots.Capture("online-hosting");
+            Unity.Rea.QuickDuel.Tests.Screenshots.Capture("online-hosting");
 
             Assert.That(menu.Leave(), Is.True);
             yield return NetAwait.Until(() => !controller.IsOnline && !bootstrap.Session.IsActive, "the scene never went back to local play");

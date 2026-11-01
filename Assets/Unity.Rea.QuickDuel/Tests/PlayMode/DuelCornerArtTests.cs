@@ -1,11 +1,11 @@
 using System.Collections;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // obj_cornerart_left and obj_cornerart_right (UQD-T43): on start both corner arts slide in from off the screen, closing
     // 1 + 0.05 of the distance left a step, until they are in place. The controller's clock is held and stepped by hand

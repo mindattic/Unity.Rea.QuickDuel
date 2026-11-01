@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The original's F12 debug overlay, the developer's toggle (UQD-T50).
     public class DebugReadoutTests

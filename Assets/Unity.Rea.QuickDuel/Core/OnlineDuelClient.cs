@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // One player's half of an online match. On each round the host sends, it runs a local Duel with the host's
     // countdown and standoff on this machine's own clock, so the player sees the cue and strikes against it exactly

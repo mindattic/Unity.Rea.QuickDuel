@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // The scripted end-to-end play-through (UQD-T54): the game is walked the way a player meets it (every mode, a clean
     // win, a premature strike, a round nobody strikes in, and a won and a lost match's verdict) and each stage is drawn

@@ -1,4 +1,4 @@
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // GameMaker's fade_asset global (UQD-T44): the loading image a room faded in on its way out, which the next room's
     // fade opens under. The intro gives it as it leaves; the scene it goes to takes it, once, as it starts.

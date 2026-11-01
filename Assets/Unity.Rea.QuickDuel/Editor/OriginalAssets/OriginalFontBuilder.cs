@@ -1,14 +1,14 @@
 using System;
 using System.IO;
 using System.Reflection;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.TextCore;
 using UnityEngine.TextCore.LowLevel;
 using UnityEngine.TextCore.Text;
 
-namespace Unity.QuickDuel.EditorTools
+namespace Unity.Rea.QuickDuel.EditorTools
 {
     /// <summary>
     /// Turns the original's five GameMaker bitmap fonts (UQD-T32 copied each one's atlas and glyph table into
@@ -24,7 +24,7 @@ namespace Unity.QuickDuel.EditorTools
     /// whole line height above a baseline at the bottom of the line.
     ///
     /// Run from the menu or in batch mode via
-    /// <c>-executeMethod Unity.QuickDuel.EditorTools.OriginalFontBuilder.Build</c>; <see cref="OriginalAssetGenerator"/>
+    /// <c>-executeMethod Unity.Rea.QuickDuel.EditorTools.OriginalFontBuilder.Build</c>; <see cref="OriginalAssetGenerator"/>
     /// rebuilds them after every import and <see cref="DuelSceneBuilder"/> builds any that are missing.
     /// </summary>
     public static class OriginalFontBuilder

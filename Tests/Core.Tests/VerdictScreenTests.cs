@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The match verdict (UQD-T48): the original's victory and gameover rooms, their heading, obj_victory's lines and
     // obj_btn_retry / obj_btn_nextbattle.

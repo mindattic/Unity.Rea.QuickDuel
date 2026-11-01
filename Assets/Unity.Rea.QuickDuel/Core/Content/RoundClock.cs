@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The match clock at the top of the duel (UQD-T50), as obj_time has it. Every figure is the original's own, read from
     // BushidoCoda.gmx, not a tuning choice:

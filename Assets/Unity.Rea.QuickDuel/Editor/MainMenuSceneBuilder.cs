@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace Unity.QuickDuel.EditorTools
+namespace Unity.Rea.QuickDuel.EditorTools
 {
     // Generates Assets/Scenes/MainMenu.unity (UQD-T45), the scene the intro leads to, so it is never hand-edited YAML.
     // Run from the menu or in batch mode:
-    // Unity -batchmode -quit -executeMethod Unity.QuickDuel.EditorTools.MainMenuSceneBuilder.Build
+    // Unity -batchmode -quit -executeMethod Unity.Rea.QuickDuel.EditorTools.MainMenuSceneBuilder.Build
     public static class MainMenuSceneBuilder
     {
         public const string SceneName = "MainMenu";

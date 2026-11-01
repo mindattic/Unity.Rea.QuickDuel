@@ -1,10 +1,10 @@
 using System;
 using Unity.Multiplayer;      // NetEntity
 using Unity.Multiplayer.Core; // [ToServer], [ToClients], [Synced], NetSender
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 
-namespace Unity.QuickDuel.Online
+namespace Unity.Rea.QuickDuel.Online
 {
     // The online duel on the wire (UQD-T14), over Unity.Multiplayer: one server-spawned network object that
     // carries the protocol of OnlineDuelHost and OnlineDuelClient. The host draws each round's countdown and standoff

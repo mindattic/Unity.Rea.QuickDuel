@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // The match verdict (UQD-T48): a finished match cuts from the loading fade's full image to the original's victory or
     // gameover room, whose one button starts a new match or goes back to the main menu.

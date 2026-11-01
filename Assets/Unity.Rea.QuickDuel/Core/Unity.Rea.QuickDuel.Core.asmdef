@@ -1,6 +1,6 @@
 {
     "name": "Unity.Rea.QuickDuel.Core",
-    "rootNamespace": "Unity.QuickDuel.Core",
+    "rootNamespace": "Unity.Rea.QuickDuel.Core",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

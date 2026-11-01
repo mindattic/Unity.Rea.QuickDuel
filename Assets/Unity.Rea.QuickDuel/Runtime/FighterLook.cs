@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // One of the original fighters as the Duel scene carries it (UQD-T34): the manifest entry (Data/assets.json, from
     // load_characters.gml) with its sprites resolved to the imported assets. Cosmetic only (BIBLE section 3): a name and

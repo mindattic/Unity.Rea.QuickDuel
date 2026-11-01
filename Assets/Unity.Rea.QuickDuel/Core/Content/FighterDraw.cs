@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // Which of the original fighters (AssetManifest.Fighters, from load_characters.gml) stands in each seat (UQD-T34).
     // Fighters are cosmetic (BIBLE section 3): nothing about a round depends on them. The authority (MatchSession

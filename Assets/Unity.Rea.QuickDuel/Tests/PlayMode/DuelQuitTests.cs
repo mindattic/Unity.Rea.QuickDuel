@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // Escape (or gamepad Select+Start) leaves the duel for the main menu at any moment, as obj_game's Escape left for the
     // dropped character select (UQD-T65); the verdict screen, which had no Escape, ignores it (DuelVerdictTests).

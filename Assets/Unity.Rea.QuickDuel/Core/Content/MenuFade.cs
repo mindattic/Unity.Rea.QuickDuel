@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The main menu's loading fade (UQD-T45), obj_fade_mainmenu exactly. It differs from the intro's (LoadingFade) in
     // where it chooses its image and in how its one firstPass is shared, and both are kept, since neither is broken here.

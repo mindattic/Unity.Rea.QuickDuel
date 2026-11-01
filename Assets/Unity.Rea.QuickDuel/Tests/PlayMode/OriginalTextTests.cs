@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
@@ -9,7 +9,7 @@ using UnityEngine.TextCore.Text;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // The original's type (UQD-T36): the five bitmap fonts load as font assets with every printable glyph, the duel's
     // text is draw_text_outline's outlined text in the font OriginalType names, and the outlined text really draws the

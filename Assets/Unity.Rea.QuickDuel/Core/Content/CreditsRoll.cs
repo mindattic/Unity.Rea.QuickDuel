@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // One arena photo credit from the original's datafiles/credits.txt: the name it gave the picture and the address
     // (or addresses) it was taken from.

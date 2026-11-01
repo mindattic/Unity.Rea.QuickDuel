@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     /// <summary>
     /// Where Core reads its data files from. Core only ever asks for a file by name ("tuning.json") and

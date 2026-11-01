@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // One of the original's ten splatters as the Duel scene carries it (UQD-T40): its imported sprite and its bounding box,
     // the pixels a click must land in to wipe it. obj_splatter's mouse events used the sprite's rectangle mask, which

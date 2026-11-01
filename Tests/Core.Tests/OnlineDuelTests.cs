@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The online protocol (UQD-T14) without a network: the host draws each round's lengths, every client runs the
     // round on its own clock and reports only its reaction, and the host judges the reports with DuelJudge.

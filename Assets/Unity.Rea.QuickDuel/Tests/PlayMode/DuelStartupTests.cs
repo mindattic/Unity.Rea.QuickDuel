@@ -1,12 +1,12 @@
 using System.Collections;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // The startup (UQD-T66), as gameclock_startup ran it: the first round's countdown begins by itself startup_time
     // after the scene starts, every later round's startup_time after the round transition's loading image is gone, a

@@ -1,7 +1,7 @@
 using System;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // Local play: Core's MatchSession, both seats on this machine, each command issued on its seat's behalf.
     public sealed class LocalDuelAuthority : IDuelAuthority

@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The blood of the cut (UQD-T40): when a strike ends the round, as gameclock_aftermath.gml did, a blood emitter at the
     // centre of the fighters' line spurts a drop every 2 steps (BloodSpray), 6 to 12 splatters land over the screen

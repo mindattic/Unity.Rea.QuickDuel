@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // obj_fade_gamescreen (UQD-T42): three seconds after the cut one of the 14 loading images fades in at 0.005 a step,
     // the battle is reset under it, and it fades out again. The controller's clock is held and stepped by hand, so every

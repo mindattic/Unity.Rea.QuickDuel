@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The counting-up number drawn in the centre while the cue is up (UQD-T38), as obj_gameclock's draw event,
     // gameclock_action.gml, action_attack.gml and gameclock_aftermath.gml have it. Every figure is the original's own,

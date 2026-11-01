@@ -1,9 +1,9 @@
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The original's F12 debug overlay (UQD-T50, DebugReadout), the developer's toggle: each side's reaction in whole
     // milliseconds (9999 before it has struck) at the room's middle height by its edge, the frames drawn a second in

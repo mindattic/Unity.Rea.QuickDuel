@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The credits screen (UQD-T47): credits.txt read into its arena photo credits, laid out under the author's credit,
     // rolling up the room, and the main menu's Credits button opening and closing it.

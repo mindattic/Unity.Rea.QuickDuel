@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The original Bushido Coda art, sound and fonts the rebuild ships (UQD-T32), as listed by the generated
     // data file Data/assets.json. The Editor's OriginalAssetGenerator copies each file out of BushidoCoda.gmx

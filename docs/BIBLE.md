@@ -393,7 +393,7 @@ live in [USER_STORIES.md](USER_STORIES.md) (generated — never hand-edited, see
   that Host / Leave put it online and back, and that a bad address is refused with a reason.
 
 - ✅ The original's art, sound and fonts in the project (UQD-T32, `AssetManifestTests`): `OriginalAssetGenerator`
-  (menu *QuickDuel → Import Original Assets*, or `-executeMethod Unity.QuickDuel.EditorTools.OriginalAssetGenerator.Generate
+  (menu *QuickDuel → Import Original Assets*, or `-executeMethod Unity.Rea.QuickDuel.EditorTools.OriginalAssetGenerator.Generate
   -originalRoot <BushidoCoda.gmx>`) copies out of the GameMaker project the 76 sprites the parity tickets draw (the five
   fighters' idle, run, attack and defeat frames, the 12 weapon and ground-weapon sprites, the 11 arenas `load_arenas.gml`
   names, the 14 loading images, the title, four corner arts, the katana cursor, two blood drops, ten splatters and the

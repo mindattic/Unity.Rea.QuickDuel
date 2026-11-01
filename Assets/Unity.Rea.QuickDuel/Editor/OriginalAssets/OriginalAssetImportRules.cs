@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEditor;
 using UnityEngine;
 
-namespace Unity.QuickDuel.EditorTools
+namespace Unity.Rea.QuickDuel.EditorTools
 {
     /// <summary>
     /// The import settings of the original art (UQD-T32), applied in code on every import rather than set by

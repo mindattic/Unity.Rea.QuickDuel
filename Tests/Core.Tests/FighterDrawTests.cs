@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The cosmetic fighters (UQD-T34): the authority draws one fighter roll per match, every peer maps it onto the same
     // pair, every pair (the same fighter twice included) is reachable, and the line-up is the original's own numbers.

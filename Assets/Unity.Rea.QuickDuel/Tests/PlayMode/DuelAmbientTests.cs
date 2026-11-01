@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // The arenas' ambient emitters (UQD-T49): the arena on screen plays its effect, drawn at the original's depths, frozen
     // while the duel waits on the first strike.

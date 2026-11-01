@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The ambient effect an arena plays (UQD-T49): which of the original's particle emitters setup_arena_properties.gml
     // created for it, or none. The first five are the ones the original placed; rain, leaf and firefly are the original's

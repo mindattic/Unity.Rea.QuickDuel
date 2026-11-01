@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // Where the round transition stands (UQD-T42).
     public enum RoundFadeStage

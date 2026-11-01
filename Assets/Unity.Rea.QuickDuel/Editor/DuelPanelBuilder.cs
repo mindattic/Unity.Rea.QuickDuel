@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel.EditorTools
+namespace Unity.Rea.QuickDuel.EditorTools
 {
     /// <summary>
     /// Builds the PanelSettings asset DuelView's UIDocument renders through (UQD-T31): the UI was legacy
@@ -13,7 +13,7 @@ namespace Unity.QuickDuel.EditorTools
     /// the same way <see cref="DuelAudio"/> reads its clips. Like <see cref="RenderPipelineBuilder"/>, this
     /// only creates the asset when it is missing (or brings its scaling into line), so rerunning it leaves the
     /// committed asset untouched. Run from the menu or in batch mode via
-    /// <c>-executeMethod Unity.QuickDuel.EditorTools.DuelPanelBuilder.BuildPanel</c>; <see cref="DuelSceneBuilder"/>
+    /// <c>-executeMethod Unity.Rea.QuickDuel.EditorTools.DuelPanelBuilder.BuildPanel</c>; <see cref="DuelSceneBuilder"/>
     /// runs it first so the scene is never generated without a panel for its UIDocument to use.
     /// Keeps Unity's default runtime theme style sheet (auto-assigned the first time any PanelSettings is
     /// created in a project with none, copying it to Assets/UI Toolkit/): DuelView itself is plain

@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The arenas (UQD-T33): the authority draws an arena roll per round, every peer maps it onto the same arena, and
     // all 11 of load_arenas.gml's arenas are reachable (the original's id clash left Sozza's Point unreachable).

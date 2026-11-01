@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The startup before each round (UQD-T66), as obj_gameclock and gameclock_startup.gml run it. Every rule is the
     // original's own, read from BushidoCoda.gmx; the length is tuning (DuelTuning.StartupSeconds, startup_time):

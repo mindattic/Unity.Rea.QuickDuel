@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ab7bea3c705ce64abe01a4a9c8a4c64, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.KatanaCursor
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.KatanaCursor
   sprite: {fileID: 21300000, guid: dd4d754885783b141ae56ffdf29ebb07, type: 3}
 --- !u!114 &414561048
 MonoBehaviour:
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80ff75b88cdfbe148a46c7d2173c2c9a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.MainMenuController
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.MainMenuController
   nextScene: Duel
   background: {fileID: 21300000, guid: a114f612e2698d74681351d501201cb3, type: 3}
   title: {fileID: 21300000, guid: 3e08edb988c305140abfaf764f416363, type: 3}

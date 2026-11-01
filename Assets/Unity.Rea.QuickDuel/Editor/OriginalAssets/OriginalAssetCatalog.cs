@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.EditorTools
+namespace Unity.Rea.QuickDuel.EditorTools
 {
     /// <summary>
     /// Which of the original's resources the rebuild uses (UQD-T32), by their GameMaker names, and where each

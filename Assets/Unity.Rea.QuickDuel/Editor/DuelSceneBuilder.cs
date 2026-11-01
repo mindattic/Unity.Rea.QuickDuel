@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace Unity.QuickDuel.EditorTools
+namespace Unity.Rea.QuickDuel.EditorTools
 {
     // Generates Assets/Scenes/Duel.unity so the scene is never hand-edited YAML. Run from the menu or
-    // in batch mode: Unity -batchmode -quit -executeMethod Unity.QuickDuel.EditorTools.DuelSceneBuilder.Build
+    // in batch mode: Unity -batchmode -quit -executeMethod Unity.Rea.QuickDuel.EditorTools.DuelSceneBuilder.Build
     public static class DuelSceneBuilder
     {
         public const string ScenePath = "Assets/Scenes/Duel.unity";

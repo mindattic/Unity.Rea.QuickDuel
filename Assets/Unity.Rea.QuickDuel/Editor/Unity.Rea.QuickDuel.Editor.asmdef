@@ -1,6 +1,6 @@
 {
     "name": "Unity.Rea.QuickDuel.Editor",
-    "rootNamespace": "Unity.QuickDuel.EditorTools",
+    "rootNamespace": "Unity.Rea.QuickDuel.EditorTools",
     "references": [
         "Unity.Rea.QuickDuel.Core",
         "Unity.Rea.QuickDuel.Runtime",

@@ -2,10 +2,10 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 
-namespace Unity.QuickDuel.EditorTests
+namespace Unity.Rea.QuickDuel.EditorTests
 {
     // The settings registry's validation as the editor sees it (UQD-T51): the tuning.json that ships in
     // StreamingAssets loads through the same DirectorySettingsSource a build reads, and a bad copy of it is

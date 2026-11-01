@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The arenas' ambient emitters (UQD-T49), figure by figure against BushidoCoda.gmx.
     public class AmbientFieldTests

@@ -2,7 +2,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // UQD-T29: the project had no render pipeline package at all (the built-in pipeline, no SRP asset),
     // so this failed before URP was added and assigned. It stays type-agnostic (no reference to the URP

@@ -1,4 +1,4 @@
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The white flash over the cut (UQD-T40), as gameclock_aftermath.gml and obj_flash have it. Every figure is the
     // original's own, read from BushidoCoda.gmx, not a tuning choice:

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The original's outlined text (UQD-T36), the one text style every piece of QuickDuel text shares: draw_text_outline
     // drew the string in black at each offset of a (2t + 1) square around the spot and then in white on top, in one of

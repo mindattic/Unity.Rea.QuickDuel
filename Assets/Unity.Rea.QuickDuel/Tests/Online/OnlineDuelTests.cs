@@ -6,11 +6,11 @@ using System.Collections;
 using NUnit.Framework;
 using Unity.Multiplayer.Core;
 using Unity.Multiplayer.Testing;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.TestTools;
 
-namespace Unity.QuickDuel.Online.Tests
+namespace Unity.Rea.QuickDuel.Online.Tests
 {
     public class OnlineDuelTests : NetSessionTest
     {

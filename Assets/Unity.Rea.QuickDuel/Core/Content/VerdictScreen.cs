@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // Which of the original's two verdict rooms a finished match goes to.
     public enum VerdictKind { Victory, GameOver }

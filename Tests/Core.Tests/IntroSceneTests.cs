@@ -1,9 +1,9 @@
 using System;
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The intro room (UQD-T44): obj_cloud_parent's drifting clouds, obj_typewriter_intro's story and obj_fade_intro's
     // loading fade, stepped at the original's 60 a second.

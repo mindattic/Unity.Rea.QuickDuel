@@ -3,12 +3,12 @@ using UnityEditor;
 using UnityEditor.Build;
 using UnityEngine;
 
-namespace Unity.QuickDuel.EditorTools
+namespace Unity.Rea.QuickDuel.EditorTools
 {
     // The player's icon (UQD-T50): the original's bushidocoda.ico (Global Game Settings' Windows icon), its 64 x 64 frame
     // as Art/Frame/bushidocoda.png, set as the default icon for every platform. Set in code, not by hand in Player
     // Settings; QuickDuelBuild runs it before every build, and it leaves Player Settings alone when the icon is already set.
-    // Run from the menu or in batch mode: -executeMethod Unity.QuickDuel.EditorTools.PlayerIconBuilder.Build
+    // Run from the menu or in batch mode: -executeMethod Unity.Rea.QuickDuel.EditorTools.PlayerIconBuilder.Build
     public static class PlayerIconBuilder
     {
         public const string IconPath = OriginalAssetGenerator.GameFolder + "/Art/Frame/bushidocoda.png";

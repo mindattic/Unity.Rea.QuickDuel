@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The loser's weapon thrown from the cut (UQD-T41): when a strike cuts one side down, as gameclock_aftermath.gml's
     // spawn_weapons did, the loser's weapon (with the Myrmidon's shield or the Ronin's second sword behind it) flies from

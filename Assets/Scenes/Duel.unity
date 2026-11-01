@@ -407,7 +407,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5f0349deb0efac449a677acf8a55804, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Online::Unity.QuickDuel.Online.OnlineDuelMenu
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Online::Unity.Rea.QuickDuel.Online.OnlineDuelMenu
   bootstrap: {fileID: 752423794}
   duelPrefab: {fileID: 1509400829402567012, guid: 921ec5f4af09ae24b9028c0ecfc50f4e, type: 3}
 --- !u!114 &1608735326
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94e132ac7b61d624daa4cc533b78158e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelAudio
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelAudio
   beep: {fileID: 8300000, guid: 755c9c453d2f51a45bf66500d28b8b2b, type: 3}
   drumroll: {fileID: 8300000, guid: 0b0e9cf1f98c7a645a10ecc9c5755934, type: 3}
   unsheath: {fileID: 8300000, guid: 16747b67b3033f045a47169e0bb064aa, type: 3}
@@ -439,7 +439,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75eec6bc89d63ca429e1f8d106026aae, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelDebugOverlay
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelDebugOverlay
 --- !u!114 &1608735328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 978fcf6725ae5e947b90ebc650fb3130, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelVerdict
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelVerdict
   victoryBackground: {fileID: 21300000, guid: fc03d540ad6f3e2498f692c16cfcf2f0, type: 3}
   gameOverBackground: {fileID: 21300000, guid: 382768e22030ada42b954374bb82c341, type: 3}
   button: {fileID: 21300000, guid: ed421b1e401d2b146ac4e9e129dda38b, type: 3}
@@ -470,7 +470,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dc41b04246775746820a508c7bca2b0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelSession
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelSession
 --- !u!114 &1608735330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ab7bea3c705ce64abe01a4a9c8a4c64, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.KatanaCursor
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.KatanaCursor
   sprite: {fileID: 21300000, guid: dd4d754885783b141ae56ffdf29ebb07, type: 3}
 --- !u!114 &1608735331
 MonoBehaviour:
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1598c9512da45f84384d110fe992bb1a, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelAmbient
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelAmbient
   looks:
   - id: spr_sand1
     frames:
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2795ea8e6fc0f147995cdcf559536ed, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelClock
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelClock
 --- !u!114 &1608735333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,7 +590,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9015adc5749b9f5429bd42893f6b1501, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelCornerArt
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelCornerArt
   leftArt: {fileID: 21300000, guid: 620ba891559a4f04a97398d0a1c704a6, type: 3}
   rightArt: {fileID: 21300000, guid: 882d2e5a17e23c949aa1dc7c8a296dc4, type: 3}
 --- !u!114 &1608735334
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af41ae3e9eabaaf498003825e46004ff, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelStartup
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelStartup
 --- !u!114 &1608735335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbd4e5d95f4a64f48a116cf09b367b4b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelFade
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelFade
   images:
   - {fileID: 21300000, guid: 46c98b2dd47ec5e4f8c84c948669b8b7, type: 3}
   - {fileID: 21300000, guid: 90af57710fe26b742a83236897b4f377, type: 3}
@@ -643,7 +643,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73194d3742867014489c146a04691f15, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelWeapons
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelWeapons
   shield: {fileID: 21300000, guid: db167ea45f7f1e846aff0759b4653049, type: 3}
   shieldGround: {fileID: 21300000, guid: 6498a854b147bd444b8bbd795aa61c6d, type: 3}
   hitGround:
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4120eb2799a68f94f96a8da16669abe3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelBlood
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelBlood
   drops:
   - {fileID: 21300000, guid: 756afd39a48fb964a84a7701a92194cf, type: 3}
   - {fileID: 21300000, guid: 1ad9a536e0a2a704b83c1a897cbc4d3c, type: 3}
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b93f2042426adf4d985d17922f6fe54, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelTaunt
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelTaunt
 --- !u!114 &1608735339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a649e1c5ac9652449b881defc613274e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelView
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelView
   arenas:
   - id: desert
     name: Wastes of Nod
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 07a8cdc72a646094ba85043c2e1cd999, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelQuit
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelQuit
 --- !u!114 &1608735341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1413a94f247b3924b972aad8ddaa8482, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelInput
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelInput
 --- !u!114 &1608735342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,7 +934,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6390f47276889048840429824c37610, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.DuelController
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.DuelController
   beginOnStart: 0
 --- !u!4 &1608735343
 Transform:

@@ -8,7 +8,7 @@ using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // The window (UQD-T50): every scene draws the original's 640 x 480 room as a 1440 x 1080 frame letterboxed into the
     // window, black around it, and F1 toggles fullscreen in every scene, as obj_intro, obj_mainmenu and obj_game did.

@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // obj_time, the match clock at the top of the duel (UQD-T50).
     public class RoundClockTests

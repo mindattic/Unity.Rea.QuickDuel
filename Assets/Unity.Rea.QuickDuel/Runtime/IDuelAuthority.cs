@@ -1,7 +1,7 @@
 using System;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The one path a Duel scene plays through, local or online (UQD-T70, rebuild standard rule 9): whichever authority
     // holds the round, the mode and the match, DuelController reads its state and issues its commands through this seam

@@ -3,7 +3,7 @@ using NUnit.Framework;
 using Unity.Shared.Core;
 using UnityEngine;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // The CLI mute (-muted / MINDATTIC_CLI_MUTED=1) reaches QuickDuel through Unity.Shared's profile
     // CommonSettings, which report sound effects muted for that session; SessionAudio turns that into a

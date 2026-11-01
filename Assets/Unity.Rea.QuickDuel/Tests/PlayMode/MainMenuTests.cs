@@ -1,6 +1,6 @@
 using System.Collections;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -8,7 +8,7 @@ using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // The main menu (UQD-T45): the title over bg_splatter_scroll, New Game, Versus, the computer's difficulty and Quit,
     // each flicking under the pointer and clicking when pressed, and New Game and Versus fading into the duel with the

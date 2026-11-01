@@ -2,9 +2,9 @@ using System;
 using System.IO;
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The original asset pipeline (UQD-T32): the generated manifest lists every original sprite, sound and font
     // the parity tickets use, every file it names is committed, each image carries the generated pixel-art import

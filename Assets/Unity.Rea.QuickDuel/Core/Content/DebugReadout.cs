@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The original's debug overlay (UQD-T50), F12's: globals.gml's `debug` toggled by obj_game's F12 key press. Every
     // figure is the original's own, read from BushidoCoda.gmx:

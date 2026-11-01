@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The original's 640 x 480 room as the frame of every scene (UQD-T50). The original's window kept the room's aspect
     // whatever its size (Global Game Settings: option_scale -1, keep aspect ratio; option_sizeable True), so the rebuild

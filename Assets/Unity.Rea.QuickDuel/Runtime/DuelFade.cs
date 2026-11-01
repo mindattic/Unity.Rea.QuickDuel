@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The round transition (UQD-T42), as obj_fade_gamescreen drew it: three seconds after a round ends, one of the 14
     // loading images fades in over everything at 0.005 a step; once it is full the battle is reset under it (BattleReset:

@@ -1,6 +1,6 @@
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // GameMaker's is_singleplayer global (UQD-T45): how the main menu said to play, which the Duel scene takes, once, as
     // it builds its session. New Game leaves a vs-AI mode at the difficulty chosen on the menu, Versus two players. A

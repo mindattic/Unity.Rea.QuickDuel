@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The main menu (UQD-T45), as the original's mainmenu room drew it (MainMenu): bg_splatter_scroll scrolling left
     // behind the title's cut-out logo, New Game, Versus, the computer's difficulty, Quit and Credits on the original's

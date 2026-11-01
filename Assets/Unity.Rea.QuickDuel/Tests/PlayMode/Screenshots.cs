@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using UnityEngine;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // Captures the whole screen -- the UI Toolkit panel DuelView draws (UQD-T31: it's a screen-space
     // overlay, not tied to any one camera the way the old uGUI Screen Space - Camera canvas was) plus the

@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // What the aftermath draws (UQD-T39), as obj_gameclock's draw event and gameclock_aftermath.gml have it. Every figure
     // is the original's own, read from BushidoCoda.gmx, not a tuning choice:

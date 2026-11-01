@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The loser's weapon thrown from the cut (UQD-T41), as gameclock_aftermath.gml, spawn_weapons.gml and obj_weapon have
     // it. Every figure is the original's own, read from BushidoCoda.gmx, not a tuning choice:

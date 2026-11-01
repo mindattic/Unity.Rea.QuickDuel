@@ -1,6 +1,6 @@
 {
     "name": "Unity.Rea.QuickDuel.Runtime",
-    "rootNamespace": "Unity.QuickDuel",
+    "rootNamespace": "Unity.Rea.QuickDuel",
     "references": [
         "Unity.Rea.QuickDuel.Core",
         "Unity.InputSystem",

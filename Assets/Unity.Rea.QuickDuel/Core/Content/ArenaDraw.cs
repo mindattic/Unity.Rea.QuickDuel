@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // Which of the original arenas (AssetManifest.Arenas, from load_arenas.gml) a round is fought on (UQD-T33).
     // The authority (MatchSession locally, OnlineDuelHost online) draws one roll per round and hands it out with

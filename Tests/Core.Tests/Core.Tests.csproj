@@ -5,7 +5,7 @@
     <Nullable>disable</Nullable>
     <IsPackable>false</IsPackable>
     <AssemblyName>Unity.Rea.QuickDuel.Core.Tests</AssemblyName>
-    <RootNamespace>Unity.QuickDuel.Core.Tests</RootNamespace>
+    <RootNamespace>Unity.Rea.QuickDuel.Core.Tests</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />

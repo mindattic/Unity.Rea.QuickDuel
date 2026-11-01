@@ -1,9 +1,9 @@
 using System;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The corner arts (UQD-T43), as obj_cornerart_left and obj_cornerart_right drew them: on start each slides in from a
     // whole sprite width off its edge of the screen, closing 1 + 0.05 of the distance left a step, until it is in place

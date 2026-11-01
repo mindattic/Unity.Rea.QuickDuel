@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The splatters the aftermath throws over the screen (UQD-T40), as gameclock_aftermath.gml and obj_splatter have it.
     // Every figure is the original's own, read from BushidoCoda.gmx, not a tuning choice:

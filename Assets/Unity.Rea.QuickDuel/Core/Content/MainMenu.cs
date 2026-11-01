@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The main menu's buttons (UQD-T45): the original's New Game, Versus and Quit, the computer's difficulty, which
     // stands in the slot of the original's empty Options button, and Credits (UQD-T47).

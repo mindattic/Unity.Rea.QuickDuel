@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The corner arts sliding in on start (UQD-T43), as obj_cornerart_left and obj_cornerart_right have them. Every figure is
     // the original's own, read from BushidoCoda.gmx, not a tuning choice:

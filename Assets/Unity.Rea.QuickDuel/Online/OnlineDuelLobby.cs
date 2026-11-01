@@ -3,7 +3,7 @@ using Unity.Multiplayer;      // NetSession
 using Unity.Multiplayer.Core; // Disconnection, DisconnectText
 using UnityEngine;
 
-namespace Unity.QuickDuel.Online
+namespace Unity.Rea.QuickDuel.Online
 {
     // The session flow of online PvP in the Duel scene (UQD-T21), apart from any menu so a test can drive it with the
     // Unity.Multiplayer test kit's own sessions. On the host it spawns the one OnlineDuel once the session is up, seats

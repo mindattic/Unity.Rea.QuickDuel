@@ -1,6 +1,6 @@
 {
     "name": "Unity.Rea.QuickDuel.Editor.Tests",
-    "rootNamespace": "Unity.QuickDuel.EditorTests",
+    "rootNamespace": "Unity.Rea.QuickDuel.EditorTests",
     "references": [
         "Unity.Rea.QuickDuel.Core",
         "Unity.Rea.QuickDuel.Runtime",

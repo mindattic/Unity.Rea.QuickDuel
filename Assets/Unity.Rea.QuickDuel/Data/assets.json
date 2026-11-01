@@ -1,8 +1,8 @@
 {
   "format": "quickduel.assets",
   "version": 1,
-  "_source": "BushidoCoda.gmx (GameMaker Studio, 2013); paths are relative to Assets/Unity.QuickDuel",
-  "_generated": "by Unity.QuickDuel.EditorTools.OriginalAssetGenerator (QuickDuel > Import Original Assets); do not edit by hand",
+  "_source": "BushidoCoda.gmx (GameMaker Studio, 2013); paths are relative to Assets/Unity.Rea.QuickDuel",
+  "_generated": "by Unity.Rea.QuickDuel.EditorTools.OriginalAssetGenerator (QuickDuel > Import Original Assets); do not edit by hand",
   "sprites": {
     "spr_character_exile_idle": { "group": "fighter", "width": 128, "height": 128, "originX": 64, "originY": 64, "frames": [ "Art/Fighters/spr_character_exile_idle_0.png" ] },
     "spr_character_exile_run": { "group": "fighter", "width": 128, "height": 128, "originX": 64, "originY": 64, "frames": [ "Art/Fighters/spr_character_exile_run_0.png" ] },

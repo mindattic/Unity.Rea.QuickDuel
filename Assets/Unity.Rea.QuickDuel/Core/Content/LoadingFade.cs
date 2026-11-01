@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // What a room's loading fade is doing (UQD-T44).
     public enum LoadingFadeMode

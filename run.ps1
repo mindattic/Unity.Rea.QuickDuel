@@ -32,7 +32,7 @@ $arguments = @(
     '-batchmode', '-nographics', '-quit',
     '-projectPath', "`"$root`"",
     '-buildTarget', 'Win64',
-    '-executeMethod', 'Unity.QuickDuel.EditorTools.QuickDuelBuild.BuildWindows',
+    '-executeMethod', 'Unity.Rea.QuickDuel.EditorTools.QuickDuelBuild.BuildWindows',
     '-logFile', "`"$log`""
 )
 $process = Start-Process -FilePath $Unity -ArgumentList $arguments -Wait -PassThru -NoNewWindow

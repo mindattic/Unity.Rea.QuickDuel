@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // The original's type (UQD-T36): which of its five GameMaker bitmap fonts each kind of text was drawn in, and how
     // thick its outline was. Every figure is the original's own, read from BushidoCoda.gmx, not a tuning choice:

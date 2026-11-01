@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Xml;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // A GameMaker bitmap font's glyph table (UQD-T36), read from its .font.gmx XML (copied as Fonts/<id>.glyphs.xml by
     // UQD-T32). GameMaker cut every glyph as a cell whose top is the top of the line: the glyph's atlas rect is

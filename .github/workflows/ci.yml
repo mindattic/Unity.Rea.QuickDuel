@@ -96,7 +96,7 @@ jobs:
       - uses: game-ci/unity-builder@v4
         with:
           targetPlatform: StandaloneWindows64
-          buildMethod: Unity.QuickDuel.EditorTools.QuickDuelBuild.BuildWindows
+          buildMethod: Unity.Rea.QuickDuel.EditorTools.QuickDuelBuild.BuildWindows
           allowDirtyBuild: true
       - name: Check the player was produced
         run: test -f Build/QuickDuel/QuickDuel.exe

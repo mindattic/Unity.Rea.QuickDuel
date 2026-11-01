@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The arena's ambient effect (UQD-T49), as setup_arena_properties.gml placed one emitter per arena: sand blowing
     // across the Wastes of Nod, butterflies over Pastel Fields, snow on the Frozen Tundra, fog drifting through the

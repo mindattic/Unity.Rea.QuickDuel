@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // Reads one JSON object of a data file and validates it as it goes. Every key must be present, of the
     // right type and in range; a key nobody asked for is an error too (a typo would otherwise be silently

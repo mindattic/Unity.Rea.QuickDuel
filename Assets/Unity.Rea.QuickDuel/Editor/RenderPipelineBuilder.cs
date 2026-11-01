@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-namespace Unity.QuickDuel.EditorTools
+namespace Unity.Rea.QuickDuel.EditorTools
 {
     /// <summary>
     /// Builds QuickDuel's render pipeline (UQD-T29): the project had no render pipeline package at all
@@ -16,7 +16,7 @@ namespace Unity.QuickDuel.EditorTools
     /// (<see cref="RendererPath"/>) and assigns it as the default pipeline and on every quality level.
     /// It only creates what is missing and only assigns what differs, so rerunning it (and every import
     /// after it) leaves the committed assets and settings untouched. Run from the menu or in batch mode
-    /// via <c>-executeMethod Unity.QuickDuel.EditorTools.RenderPipelineBuilder.BuildPipeline</c>;
+    /// via <c>-executeMethod Unity.Rea.QuickDuel.EditorTools.RenderPipelineBuilder.BuildPipeline</c>;
     /// <see cref="DuelSceneBuilder"/> runs it first so the scene is never generated without a pipeline.
     /// </summary>
     public static class RenderPipelineBuilder

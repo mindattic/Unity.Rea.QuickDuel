@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // F1 toggles fullscreen (UQD-T50), as obj_intro, obj_mainmenu and obj_game each did with their F1 key press
     // (window_set_fullscreen(!window_get_fullscreen())): the window goes to the whole display, and back to the window it

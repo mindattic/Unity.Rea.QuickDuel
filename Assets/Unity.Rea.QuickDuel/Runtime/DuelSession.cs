@@ -1,8 +1,8 @@
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The on-screen session labels: the match score (standing in for the original's HP bars) and the verdict
     // banner, and online the line that says who hosts and who joined. The mode, the match and the AI's own

@@ -2,7 +2,7 @@ using System;
 using Unity.Shared.Core;
 using UnityEngine;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // Honours the player's shared Unity.Shared profile audio settings for the whole game: the listener plays at the
     // profile's sound-effect volume (every QuickDuel sound is a sound effect; the original has no music), the volume a

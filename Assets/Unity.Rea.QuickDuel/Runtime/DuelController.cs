@@ -1,8 +1,8 @@
 using System;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The thin Unity-facing face of the duel's one authority (IDuelAuthority, UQD-T70): local play goes through Core's
     // MatchSession (LocalDuelAuthority, UQD-T30), online play through the online duel (OnlineDuelAuthority, UQD-T21), and

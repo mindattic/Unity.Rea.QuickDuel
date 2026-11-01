@@ -1,8 +1,8 @@
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The original's strike keys (obj_game, UQD-T69). Against the computer, Space or the left mouse button strikes for
     // the player (the left fighter). In Versus, Left Ctrl strikes for the left fighter and Right Ctrl for the right, and

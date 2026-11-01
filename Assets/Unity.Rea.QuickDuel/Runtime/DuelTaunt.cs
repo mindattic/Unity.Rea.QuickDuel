@@ -1,8 +1,8 @@
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // Mocks whoever struck before the cue with one line from the old Android build of Bushido Coda, drawn where and as the
     // GameMaker build drew its own "Premature Strike!" (UQD-T39): centred on Get Ready's line, white, in fnt_oldenglish

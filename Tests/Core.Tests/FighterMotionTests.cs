@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The fighters' motion through a round (UQD-T35), against the original's own figures: the cue puts both on their run
     // marks at 40% and 60% of the 640-pixel room creeping 0.01 pixel a 1000 fps step; the winner jumps to the middle and

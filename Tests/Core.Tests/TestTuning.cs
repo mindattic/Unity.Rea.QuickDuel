@@ -1,7 +1,7 @@
 using System.IO;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The tuning the game ships (Assets/StreamingAssets/Settings/tuning.json), loaded once for the tests.
     public static class TestTuning

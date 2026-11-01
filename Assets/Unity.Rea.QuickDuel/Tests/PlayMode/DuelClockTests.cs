@@ -1,13 +1,13 @@
 using System.Collections;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace Unity.QuickDuel.Tests
+namespace Unity.Rea.QuickDuel.Tests
 {
     // obj_time (UQD-T50): the match clock drops in at the top centre of the room and counts the match's mm:ss. The
     // controller's clock is held and stepped by hand from the moment the clock started.

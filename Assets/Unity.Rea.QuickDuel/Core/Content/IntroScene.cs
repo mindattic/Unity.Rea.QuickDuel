@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // One drifting cloud of the intro (obj_cloud1 to 4, children of obj_cloud_parent): which of spr_cloud1 to 4 it draws
     // (0 to 3) and its room position, the sprite's top left (the clouds' origin is 0, 0).

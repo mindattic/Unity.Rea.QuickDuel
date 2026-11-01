@@ -1,7 +1,7 @@
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // The startup before each local round (UQD-T66), as gameclock_startup ran it: the countdown begins by itself
     // DuelTuning.StartupSeconds (startup_time, 3 s) after the scene starts for the first round, and after the round

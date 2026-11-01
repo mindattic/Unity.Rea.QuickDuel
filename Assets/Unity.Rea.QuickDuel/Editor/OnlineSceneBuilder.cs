@@ -3,12 +3,12 @@ using Unity.Multiplayer;
 using Unity.Multiplayer.Core;
 using Unity.Multiplayer.Editor;
 using Unity.Netcode;
-using Unity.QuickDuel.Online;
+using Unity.Rea.QuickDuel.Online;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Unity.QuickDuel.EditorTools
+namespace Unity.Rea.QuickDuel.EditorTools
 {
     // The online half of the generated Duel scene (UQD-T21): the OnlineDuel network prefab and its prefab list, the
     // scene's NetworkManager (Unity Transport and a NetBootstrap, through Unity.Multiplayer's own NetSceneSetup) and

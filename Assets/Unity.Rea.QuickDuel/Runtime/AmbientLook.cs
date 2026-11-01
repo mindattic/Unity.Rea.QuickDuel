@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // One sprite an ambient effect draws (UQD-T49), as the Duel scene carries it: its GameMaker name, its imported frames
     // in order, its size and its origin in the original's pixels (from the top left, as xorig / yorigin), the point it is

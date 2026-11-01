@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75814b03fe64cfd41ba5dee28f6029a5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.QuickDuel.IntroController
+  m_EditorClassIdentifier: Unity.Rea.QuickDuel.Runtime::Unity.Rea.QuickDuel.IntroController
   nextScene: MainMenu
   background: {fileID: 21300000, guid: c5367ccf0c3636f47b7f55690e69b769, type: 3}
   clouds:

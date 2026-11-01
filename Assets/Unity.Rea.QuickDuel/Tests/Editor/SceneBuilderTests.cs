@@ -1,11 +1,11 @@
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.EditorTools;
+using Unity.Rea.QuickDuel.EditorTools;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace Unity.QuickDuel.EditorTests
+namespace Unity.Rea.QuickDuel.EditorTests
 {
     // The built scenes (UQD-T51): each committed scene is opened (additively, then closed) and checked for the
     // controller and assets its builder wires, and the build order puts the intro first, then the menu, then the

@@ -1,7 +1,7 @@
 using System;
 using NUnit.Framework;
 
-namespace Unity.QuickDuel.Core.Tests
+namespace Unity.Rea.QuickDuel.Core.Tests
 {
     // The startup before each round (UQD-T66): gameclock_startup's startup_time, counted at once for the first round
     // (juststarted) and from the loading image's end for every later one; a click skips it while it runs.

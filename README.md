@@ -35,7 +35,7 @@ That's the whole game:
 ### The art pipeline
 
 The original's sprites, sounds and fonts are not edited in Unity. In the editor, *QuickDuel > Import Original Assets*
-(or `-executeMethod Unity.QuickDuel.EditorTools.OriginalAssetGenerator.Generate` in batch mode) copies them from the
+(or `-executeMethod Unity.Rea.QuickDuel.EditorTools.OriginalAssetGenerator.Generate` in batch mode) copies them from the
 GameMaker project, applies the import rules, builds the bitmap fonts and writes `Data/assets.json`. Scenes are built
 the same way (*QuickDuel > Rebuild Duel / Intro / Main Menu Scene*); never hand-edit the scene YAML.
 

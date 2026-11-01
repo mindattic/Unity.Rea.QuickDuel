@@ -1,7 +1,7 @@
 using System;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // What DuelController needs from an online duel to drive the Duel scene in place of its local MatchSession
     // (UQD-T21). Implemented by the Online assembly's OnlineDuel (the NetEntity), which Runtime cannot name:

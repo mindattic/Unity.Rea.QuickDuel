@@ -1,6 +1,6 @@
 using System;
 
-namespace Unity.QuickDuel.Core
+namespace Unity.Rea.QuickDuel.Core
 {
     // Judges a round from reaction times alone: seconds from the cue, negative for a strike before it,
     // null for no strike. An online host uses it on the times each client measured from its own local cue.

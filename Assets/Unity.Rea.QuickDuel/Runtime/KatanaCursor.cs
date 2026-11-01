@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.UIElements;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // A scene whose UI Toolkit tree the katana cursor hangs off (UQD-T46): the main menu and the duel.
     public interface IKatanaCursorHost

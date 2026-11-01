@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using NUnit.Framework;
-using Unity.QuickDuel.Core;
-using Unity.QuickDuel.EditorTools;
+using Unity.Rea.QuickDuel.Core;
+using Unity.Rea.QuickDuel.EditorTools;
 using UnityEditor;
 using UnityEngine;
 
-namespace Unity.QuickDuel.EditorTests
+namespace Unity.Rea.QuickDuel.EditorTests
 {
     // The art and data generators (UQD-T51): the script and config readers that turn the original's GameMaker
     // files into the manifest, run on small stand-ins written to a temp folder, and the committed manifest checked

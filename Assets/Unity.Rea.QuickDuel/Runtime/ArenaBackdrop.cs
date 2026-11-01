@@ -1,8 +1,8 @@
 using System;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
 
-namespace Unity.QuickDuel
+namespace Unity.Rea.QuickDuel
 {
     // One of the original arenas as the Duel scene carries it (UQD-T33): the manifest entry (Data/assets.json,
     // from load_arenas.gml) with its backdrop sprite resolved to the imported asset. Written by DuelSceneBuilder

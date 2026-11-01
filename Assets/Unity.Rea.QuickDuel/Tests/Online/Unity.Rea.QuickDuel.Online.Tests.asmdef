@@ -1,6 +1,6 @@
 {
     "name": "Unity.Rea.QuickDuel.Online.Tests",
-    "rootNamespace": "Unity.QuickDuel.Online.Tests",
+    "rootNamespace": "Unity.Rea.QuickDuel.Online.Tests",
     "references": [
         "Unity.Rea.QuickDuel.Core",
         "Unity.Rea.QuickDuel.Runtime",

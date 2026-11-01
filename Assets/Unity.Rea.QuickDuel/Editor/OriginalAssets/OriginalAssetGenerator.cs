@@ -5,11 +5,11 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
-using Unity.QuickDuel.Core;
+using Unity.Rea.QuickDuel.Core;
 using UnityEditor;
 using UnityEngine;
 
-namespace Unity.QuickDuel.EditorTools
+namespace Unity.Rea.QuickDuel.EditorTools
 {
     /// <summary>
     /// Copies the original Bushido Coda art, sound and fonts the rebuild uses (UQD-T32) out of the GameMaker
@@ -19,7 +19,7 @@ namespace Unity.QuickDuel.EditorTools
     /// either: <see cref="OriginalAssetImportRules"/> applies them from the manifest on every import.
     /// The copied files are committed, so the game and CI never need the original; rerun this only to refresh
     /// them. Run from the menu or in batch mode:
-    /// <c>-executeMethod Unity.QuickDuel.EditorTools.OriginalAssetGenerator.Generate [-originalRoot &lt;BushidoCoda.gmx&gt;]</c>
+    /// <c>-executeMethod Unity.Rea.QuickDuel.EditorTools.OriginalAssetGenerator.Generate [-originalRoot &lt;BushidoCoda.gmx&gt;]</c>
     /// (or set QUICKDUEL_ORIGINAL_ROOT). The default is the owner's archive path.
     /// </summary>
     public static class OriginalAssetGenerator
@@ -497,7 +497,7 @@ namespace Unity.QuickDuel.EditorTools
                 Line(1, $"\"format\": {Str(AssetManifest.Format)},");
                 Line(1, $"\"version\": {AssetManifest.CurrentVersion},");
                 Line(1, $"\"_source\": {Str("BushidoCoda.gmx (GameMaker Studio, 2013); paths are relative to " + GameFolder)},");
-                Line(1, $"\"_generated\": {Str("by Unity.QuickDuel.EditorTools.OriginalAssetGenerator (QuickDuel > Import Original Assets); do not edit by hand")},");
+                Line(1, $"\"_generated\": {Str("by Unity.Rea.QuickDuel.EditorTools.OriginalAssetGenerator (QuickDuel > Import Original Assets); do not edit by hand")},");
 
                 Line(1, "\"sprites\": {");
                 for (var i = 0; i < sprites.Count; i++)
