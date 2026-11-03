@@ -18,13 +18,18 @@ namespace Unity.Rea.QuickDuel.Core
         private bool rightReported;
         private double deadline;
 
+        // The opt-in per-round arena (DuelOptions.ArenaPerRound, UQD-T72); off, the arena is drawn once per match.
+        private readonly bool arenaPerRound;
+
         public OnlineDuelHost(
             DuelSettings settings,
             int winsNeeded,
             double humanFloorSeconds,
             double reportGraceSeconds,
-            Random random = null)
+            Random random = null,
+            bool arenaPerRound = false)
         {
+            this.arenaPerRound = arenaPerRound;
             this.settings = settings ?? throw new ArgumentNullException(nameof(settings));
             if (reportGraceSeconds < 0 || double.IsNaN(reportGraceSeconds))
                 throw new ArgumentOutOfRangeException(nameof(reportGraceSeconds), "The report grace must not be negative.");
@@ -73,6 +78,8 @@ namespace Unity.Rea.QuickDuel.Core
                 throw new InvalidOperationException("The current round has not been judged yet.");
             if (Match.IsOver)
                 NewMatch();
+            else if (arenaPerRound && Round > 0)
+                ArenaRoll = ArenaDraw.Roll(random);
 
             Round++;
             RoundOpen = true;

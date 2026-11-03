@@ -89,6 +89,31 @@ namespace Unity.Rea.QuickDuel.Core.Tests
         }
 
         [Test]
+        public void The_opt_in_per_round_arena_redraws_it_every_round_locally_and_on_the_host()
+        {
+            // DuelOptions.ArenaPerRound (UQD-T72): the rebuild's old deviation, never the default.
+            var session = new MatchSession(() => TestTuning.Profile.Ai, 99, DuelMode.LocalPvp, new Random(11),
+                arenaPerRound: true);
+            var host = new OnlineDuelHost(Quick(), 99, TestTuning.Profile.Judge.HumanFloorSeconds,
+                TestTuning.Profile.Online.ReportGraceSeconds, new Random(5), arenaPerRound: true);
+            var local = new HashSet<int>();
+            var online = new HashSet<int>();
+            for (var round = 1; round <= 20; round++)
+            {
+                var now = round * 10.0;
+                Assert.That(session.BeginRound(Quick(), now), Is.True);
+                local.Add(session.ArenaRoll);
+                session.Tick(now + 5.0);
+                host.BeginRound(round * 100.0);
+                online.Add(host.ArenaRoll);
+                host.Report(Side.Left, round, 0.3);
+                host.Report(Side.Right, round, 0.4);
+            }
+            Assert.That(local.Count, Is.GreaterThan(1), "a fresh arena per local round");
+            Assert.That(online.Count, Is.GreaterThan(1), "a fresh arena per online round");
+        }
+
+        [Test]
         public void The_host_hands_its_arena_roll_to_every_client_with_the_round()
         {
             var host = new OnlineDuelHost(Quick(), 2, TestTuning.Profile.Judge.HumanFloorSeconds,

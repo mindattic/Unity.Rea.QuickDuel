@@ -13,6 +13,10 @@ namespace Unity.Rea.QuickDuel
     // Start begins the next round. Each strike carries its input event's own timestamp (CallbackContext.time, on
     // the Time.realtimeSinceStartup timeline), so the frame that happens to process it doesn't change the
     // reaction time.
+    //
+    // Opt-in, never the default (DuelOptions, UQD-T72): letterStrikeKeys adds the rebuild's old A (left) and L (right)
+    // strike keys in every mode, and readyWaitsForStart makes a local round's startup wait for Space or a pad's Start,
+    // which then begins it (Space then begins the round rather than striking).
     [RequireComponent(typeof(DuelController))]
     public sealed class DuelInput : MonoBehaviour
     {
@@ -23,6 +27,8 @@ namespace Unity.Rea.QuickDuel
         private InputAction spaceKey;
         private InputAction leftCtrl;
         private InputAction rightCtrl;
+        private InputAction letterLeft;
+        private InputAction letterRight;
         private InputAction padStrike;
         private InputAction pointerStrike;
         private InputAction nextRound;
@@ -44,6 +50,8 @@ namespace Unity.Rea.QuickDuel
             spaceKey = new InputAction("SpaceStrike", InputActionType.Button, "<Keyboard>/space");
             leftCtrl = new InputAction("LeftCtrlStrike", InputActionType.Button, "<Keyboard>/leftCtrl");
             rightCtrl = new InputAction("RightCtrlStrike", InputActionType.Button, "<Keyboard>/rightCtrl");
+            letterLeft = new InputAction("LetterLeftStrike", InputActionType.Button, "<Keyboard>/a");
+            letterRight = new InputAction("LetterRightStrike", InputActionType.Button, "<Keyboard>/l");
 
             // Pass-through so two pads pressing together each report, rather than one action
             // disambiguating them away.
@@ -58,10 +66,22 @@ namespace Unity.Rea.QuickDuel
 
             // Keys typed into the online menu's address field, and clicks on its buttons, are the menu's (UQD-T21).
             // obj_game's Space: if (is_singleplayer) action_attack(0).
-            spaceKey.performed += ctx => { if (!Versus && !UiFocus.IsTyping) controller.Strike(Side.Left, ctx.time); };
+            // With the opt-in Ready phase, Space in the startup begins the round instead (and never also strikes).
+            spaceKey.performed += ctx =>
+            {
+                if (UiFocus.IsTyping || BeganOnStart()) return;
+                if (!Versus) controller.Strike(Side.Left, ctx.time);
+            };
             // obj_game's keyboard event: if (!is_singleplayer) vk_lcontrol -> action_attack(0), vk_rcontrol -> action_attack(1).
             leftCtrl.performed += ctx => { if (!VsComputer && !UiFocus.IsTyping) controller.Strike(Side.Left, ctx.time); };
             rightCtrl.performed += ctx => { if (!VsComputer && !UiFocus.IsTyping) controller.Strike(Side.Right, ctx.time); };
+            // The opt-in A / L keys: A for the left fighter, L for the right (refused while the computer plays it).
+            letterLeft.performed += ctx => { if (LetterKeys && !UiFocus.IsTyping) controller.Strike(Side.Left, ctx.time); };
+            letterRight.performed += ctx =>
+            {
+                if (LetterKeys && (RightIsHuman || controller.IsOnline) && !UiFocus.IsTyping)
+                    controller.Strike(Side.Right, ctx.time);
+            };
             padStrike.performed += OnPadStrike;
             // obj_game's global left press: startup ? countdown : (is_singleplayer ? action_attack(0)).
             pointerStrike.performed += ctx =>
@@ -69,14 +89,19 @@ namespace Unity.Rea.QuickDuel
                 if (UiFocus.PointerOverUi || Skipped() || Versus) return;
                 controller.Strike(Side.Left, ctx.time);
             };
-            // Online only: the host's Start or Space begins the next round, unless Select is held with Start — that
-            // chord is DuelQuit's. A local round begins by itself (DuelStartup).
+            // Online: the host's Start or Space begins the next round, unless Select is held with Start — that
+            // chord is DuelQuit's. A local round begins by itself (DuelStartup), or with the opt-in Ready phase on a
+            // pad's Start (Space is spaceKey's own, so one press never both begins and strikes).
             nextRound.performed += ctx =>
             {
-                if (!controller.IsOnline)
-                    return;
                 if (ctx.control.device is Gamepad pad && pad.selectButton.isPressed)
                     return;
+                if (!controller.IsOnline)
+                {
+                    if (ctx.control.device is Gamepad)
+                        BeganOnStart();
+                    return;
+                }
                 if (ctx.control.device is Keyboard && UiFocus.IsTyping)
                     return;
                 // The aftermath plays out and the loading fade resets the battle before the next round (UQD-T42).
@@ -96,6 +121,8 @@ namespace Unity.Rea.QuickDuel
             spaceKey.Enable();
             leftCtrl.Enable();
             rightCtrl.Enable();
+            letterLeft.Enable();
+            letterRight.Enable();
             padStrike.Enable();
             pointerStrike.Enable();
             nextRound.Enable();
@@ -106,6 +133,8 @@ namespace Unity.Rea.QuickDuel
             spaceKey.Disable();
             leftCtrl.Disable();
             rightCtrl.Disable();
+            letterLeft.Disable();
+            letterRight.Disable();
             padStrike.Disable();
             pointerStrike.Disable();
             nextRound.Disable();
@@ -116,6 +145,8 @@ namespace Unity.Rea.QuickDuel
             spaceKey.Dispose();
             leftCtrl.Dispose();
             rightCtrl.Dispose();
+            letterLeft.Dispose();
+            letterRight.Dispose();
             padStrike.Dispose();
             pointerStrike.Dispose();
             nextRound.Dispose();
@@ -123,6 +154,12 @@ namespace Unity.Rea.QuickDuel
 
         // The startup's skip (obj_game's global left press in "startup"): true when it began the round.
         private bool Skipped() => startup != null && startup.TrySkip();
+
+        // The opt-in Ready phase's Space / Start (DuelOptions.ReadyWaitsForStart): true when it began the round.
+        private bool BeganOnStart() => !controller.IsOnline && startup != null && startup.TryBeginOnStart();
+
+        // The opt-in A / L strike keys (DuelOptions.LetterStrikeKeys).
+        private static bool LetterKeys => TuningStore.Profile.Options.LetterStrikeKeys;
 
         private void OnPadStrike(InputAction.CallbackContext ctx)
         {

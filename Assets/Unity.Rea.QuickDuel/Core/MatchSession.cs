@@ -20,14 +20,19 @@ namespace Unity.Rea.QuickDuel.Core
         private readonly Func<AiTuning> aiTuning;
         private readonly int winsNeeded;
         private readonly Random random;
+        private readonly bool arenaPerRound;
         private AiOpponent ai;
         private double? aiStrikeAt;
 
-        public MatchSession(Func<AiTuning> aiTuning, int winsNeeded, DuelMode mode = DuelMode.LocalPvp, Random random = null)
+        // `arenaPerRound` opts into the rebuild's old fresh arena every round (DuelOptions.ArenaPerRound, UQD-T72);
+        // off, as the original, the arena is drawn once per match.
+        public MatchSession(Func<AiTuning> aiTuning, int winsNeeded, DuelMode mode = DuelMode.LocalPvp, Random random = null,
+            bool arenaPerRound = false)
         {
             this.aiTuning = aiTuning ?? throw new ArgumentNullException(nameof(aiTuning));
             this.winsNeeded = winsNeeded;
             this.random = random ?? new Random();
+            this.arenaPerRound = arenaPerRound;
             ApplyMode(mode);
         }
 
@@ -87,6 +92,8 @@ namespace Unity.Rea.QuickDuel.Core
 
             if (Match.IsOver)
                 NewMatch();
+            else if (arenaPerRound && Duel != null)
+                ArenaRoll = ArenaDraw.Roll(random); // the opt-in per-round arena (UQD-T72); a new match drew its own
 
             Duel = new Duel(settings);
             Duel.PhaseChanged += OnDuelPhaseChanged;

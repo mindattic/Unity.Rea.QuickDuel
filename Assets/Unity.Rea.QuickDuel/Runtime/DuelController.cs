@@ -16,7 +16,7 @@ namespace Unity.Rea.QuickDuel
         // Replaced by tests to shorten a round; applies from the next local BeginRound.
         public DuelSettings Settings
         {
-            get => settings ?? (settings = TuningStore.Profile.Duel.ToLocalSettings());
+            get => settings ?? (settings = TuningStore.Profile.LocalDuelSettings());
             set => settings = value;
         }
 
@@ -42,7 +42,8 @@ namespace Unity.Rea.QuickDuel
                 if (local == null)
                 {
                     local = new LocalDuelAuthority(new MatchSession(() => TuningStore.Profile.Ai,
-                        TuningStore.Profile.Match.WinsNeeded, DuelModeHandoff.TakeOr(DuelMode.LocalPvp)), () => Settings);
+                        TuningStore.Profile.Match.WinsNeeded, DuelModeHandoff.TakeOr(DuelMode.LocalPvp),
+                        arenaPerRound: TuningStore.Profile.Options.ArenaPerRound), () => Settings);
                     if (onlineAuthority == null)
                         Listen(local);
                 }

@@ -32,7 +32,15 @@
       "taunts": [
         "Premature Strike", "Stumbled", "Impetuous Attack", "Clumsy Move", "Hurried Action",
         "Jumped the Gun", "Overzealous", "Too Soon", "Too Early", "Fail"
-      ]
+      ],
+      "options": {
+        "_source": "The rebuild's old deviations from the original, kept as opt-in options and never the default (UQD-T72; docs/BIBLE.md 4.8). Each is false here and when left out, so this profile plays the original: arenaPerRound draws a fresh arena every round (UQD-T63), letterStrikeKeys adds A / L strike keys (UQD-T69), readyWaitsForStart makes a local startup wait for Space / Start (UQD-T66), inDuelModeCycle adds Tab / Select to cycle the local mode between rounds with its mode line (UQD-T67), localStrikeTimeout gives up a local round after strikeTimeoutSeconds (UQD-T68).",
+        "arenaPerRound": false,
+        "letterStrikeKeys": false,
+        "readyWaitsForStart": false,
+        "inDuelModeCycle": false,
+        "localStrikeTimeout": false
+      }
     }
   }
 }

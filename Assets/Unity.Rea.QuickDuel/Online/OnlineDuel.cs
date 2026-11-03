@@ -170,7 +170,8 @@ namespace Unity.Rea.QuickDuel.Online
 
         private void CreateHost(int winsNeeded)
         {
-            var host = new OnlineDuelHost(HostSettings, winsNeeded, HumanFloorSeconds, ReportGraceSeconds);
+            var host = new OnlineDuelHost(HostSettings, winsNeeded, HumanFloorSeconds, ReportGraceSeconds,
+                arenaPerRound: Tuning.Options.ArenaPerRound);
             Host = host;
             Host.RoundBegan += (round, countdown, standoff) => RoundBegan(round, countdown, standoff, host.ArenaRoll, host.FighterRoll, LeftClient, RightClient);
             Host.RoundJudged += SendVerdict;

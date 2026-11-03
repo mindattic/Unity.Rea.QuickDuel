@@ -140,6 +140,13 @@ namespace Unity.Rea.QuickDuel.Core
         public OnlineTuning Online { get; private set; }
         public string[] Taunts { get; private set; }
 
+        // The rebuild's old deviations, offered as opt-in options (UQD-T72); every one is off unless the profile turns it on.
+        public DuelOptions Options { get; private set; }
+
+        // A local round's settings: no strike timeout (DuelTuning.ToLocalSettings, UQD-T68), unless the profile opts back
+        // into the rebuild's old local timeout (DuelOptions.LocalStrikeTimeout), when they are the online round's.
+        public DuelSettings LocalDuelSettings() => Options.LocalStrikeTimeout ? Duel.ToSettings() : Duel.ToLocalSettings();
+
         internal static TuningProfile Read(string name, SettingsReader r) => new TuningProfile
         {
             Name = name,
@@ -149,7 +156,50 @@ namespace Unity.Rea.QuickDuel.Core
             Judge = JudgeTuning.Read(r.Section("judge")),
             Online = OnlineTuning.Read(r.Section("online")),
             Taunts = r.Texts("taunts"),
+            Options = DuelOptions.Read(r.OptionalSection("options")),
         };
+    }
+
+    // The rebuild's old deviations from the original, which the faithfulness audit restored to the original's behaviour
+    // (UQD-T63, T66 to T69), kept as tuning options a profile may turn on (UQD-T72). Never the default: each is false
+    // when the profile's "options" section, or the key itself, is left out, so the game plays the original unless a
+    // profile asks otherwise.
+    public sealed class DuelOptions
+    {
+        // A fresh arena every round instead of one per match (UQD-T63's deviation), locally and on the online host.
+        public bool ArenaPerRound { get; private set; }
+
+        // A strikes for the left fighter and L for the right in every local mode and online, alongside the original's
+        // Space / Left Ctrl / Right Ctrl (UQD-T69's deviation).
+        public bool LetterStrikeKeys { get; private set; }
+
+        // A local round's startup waits for Space or a pad's Start instead of beginning by itself startup_time later
+        // (UQD-T66's deviation); a click or a pad's South still begins it at once.
+        public bool ReadyWaitsForStart { get; private set; }
+
+        // Tab or a pad's Select cycles the local mode between rounds (PvP, AI Easy, Normal, Hard), under a mode line
+        // saying so (UQD-T67's deviation).
+        public bool InDuelModeCycle { get; private set; }
+
+        // A local round gives up after strikeTimeoutSeconds with nobody struck, as online rounds do (UQD-T68's deviation).
+        public bool LocalStrikeTimeout { get; private set; }
+
+        // Every option off: the original's behaviour.
+        public static DuelOptions None => new DuelOptions();
+
+        internal static DuelOptions Read(SettingsReader r)
+        {
+            var options = new DuelOptions
+            {
+                ArenaPerRound = r.Flag("arenaPerRound"),
+                LetterStrikeKeys = r.Flag("letterStrikeKeys"),
+                ReadyWaitsForStart = r.Flag("readyWaitsForStart"),
+                InDuelModeCycle = r.Flag("inDuelModeCycle"),
+                LocalStrikeTimeout = r.Flag("localStrikeTimeout"),
+            };
+            r.Done();
+            return options;
+        }
     }
 
     // The round's clock: the startup before it, the 3-2-1 countdown, the random drumroll, and how long a strike may take.

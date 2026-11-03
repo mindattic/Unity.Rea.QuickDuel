@@ -22,6 +22,7 @@ namespace Unity.Rea.QuickDuel
         private DuelVerdict verdict;
         private InputAction escape;
         private InputAction padStart;
+        private bool chordFired;
 
         // Loads a scene by name; replaced by tests so leaving doesn't tear down the test scene.
         public Action<string> Leave { get; set; } = name => SceneManager.LoadScene(name);
@@ -40,7 +41,12 @@ namespace Unity.Rea.QuickDuel
             padStart.performed += ctx =>
             {
                 if (ctx.control.device is Gamepad pad && pad.selectButton.isPressed)
+                {
+                    // Marked before TryLeave: the opt-in in-duel mode cycle (DuelSession, UQD-T72) reads this on Select's
+                    // release to skip cycling the mode, whether or not the leave itself went through.
+                    chordFired = true;
                     TryLeave();
+                }
             };
         }
 
@@ -70,6 +76,15 @@ namespace Unity.Rea.QuickDuel
                 return false;
             Leave?.Invoke(MenuScene);
             return true;
+        }
+
+        // DuelSession calls this when Select is released, to tell a Select+Start chord apart from a plain tap.
+        // Consumes the flag either way.
+        public bool ConsumeChord()
+        {
+            var fired = chordFired;
+            chordFired = false;
+            return fired;
         }
     }
 }

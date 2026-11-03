@@ -30,6 +30,36 @@ namespace Unity.Rea.QuickDuel.Core
             return new SettingsReader(value, $"{path}.{key}", errors);
         }
 
+        // The nested object key, which may be left out: an absent section reads every optional value as its fallback
+        // (Flag), so a file written before the section existed still loads exactly as it did. Present, it is checked
+        // like any other section.
+        public SettingsReader OptionalSection(string key)
+        {
+            read.Add(key);
+            var value = obj?.Get(key);
+            if (value != null && value.Kind != JsonKind.Object)
+            {
+                Fail(key, value, $"must be an object (is {Describe(value)})");
+                value = null;
+            }
+            return new SettingsReader(value, $"{path}.{key}", errors);
+        }
+
+        // A true / false that may be left out, reading as `fallback` then.
+        public bool Flag(string key, bool fallback = false)
+        {
+            read.Add(key);
+            var value = obj?.Get(key);
+            if (value == null)
+                return fallback;
+            if (value.Kind != JsonKind.Bool)
+            {
+                Fail(key, value, $"must be true or false (is {Describe(value)})");
+                return fallback;
+            }
+            return value.Bool;
+        }
+
         // Every member of this object as a nested object, in document order (the named profiles). A member
         // that is not an object is reported.
         public List<KeyValuePair<string, SettingsReader>> Sections()

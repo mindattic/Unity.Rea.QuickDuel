@@ -89,6 +89,42 @@ namespace Unity.Rea.QuickDuel.Core.Tests
         }
 
         [Test]
+        public void The_old_deviations_are_options_that_are_never_the_default()
+        {
+            // UQD-T72: the shipped profile and a profile with no "options" section both play the original.
+            foreach (var options in new[] { TestTuning.Profile.Options, TuningRegistry.Load(Memory(Good)).Default.Options })
+            {
+                Assert.That(options.ArenaPerRound, Is.False);
+                Assert.That(options.LetterStrikeKeys, Is.False);
+                Assert.That(options.ReadyWaitsForStart, Is.False);
+                Assert.That(options.InDuelModeCycle, Is.False);
+                Assert.That(options.LocalStrikeTimeout, Is.False);
+            }
+            Assert.That(TestTuning.Profile.LocalDuelSettings().StrikeTimeoutSeconds, Is.EqualTo(double.PositiveInfinity));
+        }
+
+        [Test]
+        public void A_profile_can_turn_the_old_deviations_on()
+        {
+            var text = Good.Replace("\"taunts\": [ \"Oops\" ]",
+                "\"taunts\": [ \"Oops\" ], \"options\": { \"arenaPerRound\": true, \"letterStrikeKeys\": true, " +
+                "\"readyWaitsForStart\": true, \"inDuelModeCycle\": true, \"localStrikeTimeout\": true }");
+            var blitz = TuningRegistry.Load(Memory(text)).Get("blitz");
+            Assert.That(blitz.Options.ArenaPerRound && blitz.Options.LetterStrikeKeys && blitz.Options.ReadyWaitsForStart
+                && blitz.Options.InDuelModeCycle && blitz.Options.LocalStrikeTimeout, Is.True);
+            Assert.That(blitz.LocalDuelSettings().StrikeTimeoutSeconds, Is.EqualTo(1.0), "the local round gives up again");
+        }
+
+        [Test]
+        public void A_bad_option_is_reported()
+        {
+            var errors = Errors(Good.Replace("\"taunts\": [ \"Oops\" ]",
+                "\"taunts\": [ \"Oops\" ], \"options\": { \"arenaPerRound\": 1, \"arenaPerRond\": true }"));
+            Assert.That(errors, Has.Some.Contains("profiles.blitz.options: 'arenaPerRound' must be true or false (is 1)"));
+            Assert.That(errors, Has.Some.Contains("profiles.blitz.options: unknown key 'arenaPerRond'"));
+        }
+
+        [Test]
         public void A_missing_file_is_reported_by_name()
         {
             var e = Assert.Throws<SettingsException>(() => TuningRegistry.Load(new MemorySettingsSource()));

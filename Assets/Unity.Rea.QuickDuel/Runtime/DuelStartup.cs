@@ -54,13 +54,21 @@ namespace Unity.Rea.QuickDuel
 
         private void Start() => SceneStartedAt = controller.Now;
 
+        // The opt-in Ready phase (DuelOptions.ReadyWaitsForStart, UQD-T72): the startup never ends by itself and waits
+        // for Space or a pad's Start (TryBeginOnStart, called by DuelInput). Off, as the original, it runs by itself.
+        public bool WaitsForStart => TuningStore.Profile.Options.ReadyWaitsForStart;
+
         private void Update()
         {
-            if (Auto && IsRunning && controller.Now >= BeginsAt)
+            if (Auto && !WaitsForStart && IsRunning && controller.Now >= BeginsAt)
                 controller.BeginRound();
         }
 
         // obj_game's global left press in the startup: mode = "countdown" at once. False when no startup is running.
         public bool TrySkip() => IsRunning && controller.BeginRound();
+
+        // Space or a pad's Start in the opt-in Ready phase: begins the round. False (and nothing happens) unless the
+        // option is on and the startup is running.
+        public bool TryBeginOnStart() => WaitsForStart && TrySkip();
     }
 }

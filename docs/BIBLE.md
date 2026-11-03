@@ -280,6 +280,15 @@ defeat frame unless the round decides the match (UQD-T64), Escape to the main me
 self-running startup with no Ready screen (UQD-T66), no in-duel mode cycle (UQD-T67), a local round with no strike
 timeout (UQD-T68), the original's strike keys (UQD-T69), and no HUD the gamescreen never drew (UQD-T73).
 
+Opt-in only, never the default (UQD-T72): a tuning profile's optional `options` section can turn the old
+deviations back on, each false when left out (and false in the shipped `standard` profile), so the game plays the
+original unless a profile asks otherwise (`DuelOptions`, `TuningProfile.LocalDuelSettings`): `arenaPerRound` (a fresh
+arena every round, locally and on the online host), `letterStrikeKeys` (A strikes left, L right, beside the original
+keys), `readyWaitsForStart` (a local startup waits for Space or a pad's Start, which begins the round; a click still
+skips it; no Ready title or prompt is drawn), `inDuelModeCycle` (Tab / Select cycles the local mode between rounds,
+under the old "vs AI (Normal) - Tab / Select: mode" line; a Select held into Select+Start quits without cycling) and
+`localStrikeTimeout` (a local round gives up after `strikeTimeoutSeconds` with "Nobody struck").
+
 ## 5. The Laws {#UQD-§5}
 
 Unity.Rea.QuickDuel **inherits the org-wide house rules** in `../../MindAttic.HouseRules.md`. Of note here:

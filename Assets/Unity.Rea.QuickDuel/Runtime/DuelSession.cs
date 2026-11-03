@@ -1,5 +1,6 @@
 using Unity.Rea.QuickDuel.Core;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 
 namespace Unity.Rea.QuickDuel
@@ -10,12 +11,17 @@ namespace Unity.Rea.QuickDuel
     // plays its events. The mode comes from the main menu's New Game or Versus, as the original's
     // is_singleplayer did; the duel has no key for it and draws no mode line (UQD-T67). SetMode and CycleMode
     // remain as the local machine's commands for code and tests; a mode change starts a fresh match.
+    //
+    // Opt-in, never the default (DuelOptions.InDuelModeCycle, UQD-T72): the rebuild's old Tab / gamepad Select cycles
+    // the local mode between rounds, under a mode line saying so ("vs AI (Normal)  -  Tab / Select: mode").
     [RequireComponent(typeof(DuelController), typeof(DuelView))]
     public sealed class DuelSession : MonoBehaviour
     {
         private DuelController controller;
         private DuelInput input;
+        private DuelQuit quit;
         private DuelView view;
+        private InputAction cycleMode;
         private OutlinedText modeText;
         private OutlinedText leftScore;
         private OutlinedText rightScore;
@@ -34,7 +40,11 @@ namespace Unity.Rea.QuickDuel
         public double? AiStrikeAt => Session.AiStrikeAt;
 
         // The online line ("Online PvP (hosting)" and so on); empty in local play, which draws none.
-        public string ModeText => controller.IsOnline ? modeText.text : "";
+        // With the opt-in in-duel mode cycle, the local mode line too.
+        public string ModeText => controller.IsOnline || CycleOn ? modeText.text : "";
+
+        // The opt-in in-duel mode cycle (DuelOptions.InDuelModeCycle).
+        private static bool CycleOn => TuningStore.Profile.Options.InDuelModeCycle;
         public string ScoreText(Side side) => (side == Side.Left ? leftScore : rightScore).text;
         public string VerdictText => verdict.style.display != DisplayStyle.None ? verdict.text : "";
 
@@ -42,6 +52,21 @@ namespace Unity.Rea.QuickDuel
         {
             controller = GetComponent<DuelController>();
             input = GetComponent<DuelInput>();
+            quit = GetComponent<DuelQuit>();
+
+            cycleMode = new InputAction("CycleMode", InputActionType.Button);
+            cycleMode.AddBinding("<Keyboard>/tab");
+            cycleMode.AddBinding("<Gamepad>/select");
+            // Fires on release, not press, so a Select held into the Select+Start quit chord (DuelQuit) can be told
+            // apart from a plain tap and skip cycling the mode on its way out.
+            cycleMode.canceled += _ =>
+            {
+                if (quit != null && quit.ConsumeChord())
+                    return;
+                if (!CycleOn || UiFocus.IsTyping)
+                    return;
+                CycleMode();
+            };
 
             controller.RoundStarted += OnRoundStarted;
             controller.Resolved += OnResolved;
@@ -66,6 +91,10 @@ namespace Unity.Rea.QuickDuel
             Session.ModeChanged += OnModeChanged;
             Redraw();
         }
+
+        private void OnEnable() => cycleMode.Enable();
+        private void OnDisable() => cycleMode.Disable();
+        private void OnDestroy() => cycleMode.Dispose();
 
         // Between rounds only: PvP -> AI Easy -> Normal -> Hard -> PvP. Issued on the local machine's behalf.
         // Refused online: the mode is the local game's, and an online duel is always player against player.
@@ -96,11 +125,15 @@ namespace Unity.Rea.QuickDuel
             if (view != null) view.RightName = AiPlaysRight ? "AI" : "Right";
             if (modeText == null) return;
             // The gamescreen drew no mode line; online (which has no original) says who hosts and who joined.
-            modeText.text = controller.IsOnline ? OnlineModeText() : "";
-            modeText.style.display = controller.IsOnline ? DisplayStyle.Flex : DisplayStyle.None;
+            // The opt-in in-duel mode cycle draws the rebuild's old local mode line.
+            modeText.text = controller.IsOnline ? OnlineModeText() : CycleOn ? LocalModeText() : "";
+            modeText.style.display = controller.IsOnline || CycleOn ? DisplayStyle.Flex : DisplayStyle.None;
             verdict.style.display = DisplayStyle.None;
             RefreshScore();
         }
+
+        private string LocalModeText() =>
+            (Session.AiPlaysRight ? $"vs AI ({MatchSession.DifficultyOf(Session.Mode)})" : "Local PvP") + "  -  Tab / Select: mode";
 
         private string OnlineModeText()
         {
