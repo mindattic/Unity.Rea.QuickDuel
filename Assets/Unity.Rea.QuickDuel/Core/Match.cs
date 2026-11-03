@@ -71,7 +71,7 @@ namespace Unity.Rea.QuickDuel.Core
 
         private static double? Best(double? best, double? reaction)
         {
-            if (!reaction.HasValue || reaction.Value < 0)
+            if (!reaction.HasValue || double.IsNaN(reaction.Value) || double.IsInfinity(reaction.Value) || reaction.Value < 0)
                 return best;
             return !best.HasValue || reaction.Value < best.Value ? reaction : best;
         }
