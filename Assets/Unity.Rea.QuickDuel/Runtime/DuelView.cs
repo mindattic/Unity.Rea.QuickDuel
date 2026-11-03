@@ -259,7 +259,8 @@ namespace Unity.Rea.QuickDuel
             {
                 case DuelOutcome.Tie: return "Draw";
                 case DuelOutcome.NoStrike: return "Nobody struck";
-                default: return result.Winner == Side.Left ? "Left wins" : rightName + " wins";
+                // A forfeit by both sides (or any other verdict with no winner) awards nobody; it is not the right side's win.
+                default: return !result.Winner.HasValue ? "Nobody wins" : result.Winner == Side.Left ? "Left wins" : rightName + " wins";
             }
         }
 

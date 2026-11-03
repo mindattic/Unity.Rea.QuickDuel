@@ -54,8 +54,11 @@ namespace Unity.Rea.QuickDuel.Core
                 throw new InvalidOperationException("The match is already over.");
 
             rounds.Add(result);
-            leftBest = Best(leftBest, result.LeftReaction);
-            rightBest = Best(rightBest, result.RightReaction);
+            // A forfeit's suspicious reaction (under the human floor) was rejected, so it must not become a best;
+            // only the side that won the forfeit reported a reaction the judge accepted.
+            var forfeit = result.Outcome == DuelOutcome.Forfeit;
+            if (!forfeit || result.Winner == Side.Left) leftBest = Best(leftBest, result.LeftReaction);
+            if (!forfeit || result.Winner == Side.Right) rightBest = Best(rightBest, result.RightReaction);
 
             if (result.Winner == Side.Left) leftWins++;
             else if (result.Winner == Side.Right) rightWins++;
