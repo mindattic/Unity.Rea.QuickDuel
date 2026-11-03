@@ -233,6 +233,11 @@ namespace Unity.Rea.QuickDuel.Core
 
         // A keyboard or pad presses the highlighted button; nothing if none is highlighted. Over the credits, it closes
         // them.
+        //
+        // The buttons stay live through obj_fade_mainmenu's fades, the fade in to the duel included: the original's
+        // obj_btn_* Left pressed events have no guard and obj_fade_mainmenu blocks nothing, so a press mid-fade can still
+        // switch New Game / Versus (the fade carries on, not restarted) or Quit. Checked against BushidoCoda.gmx
+        // (UQD-T95); kept on purpose, do not add a fade guard.
         public void Activate()
         {
             if (CreditsOpen)
