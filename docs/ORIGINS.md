@@ -56,7 +56,7 @@ time reactions by frame; QuickDuel times them by input event timestamp instead.
 ## Room by room: where each GameMaker room went (verified 2026-10-23, UQD-T19)
 
 Checked against `GameMaker\gmlBushidoCoda\BushidoCoda.gmx` and a scripted run of the Windows build
-(`run.ps1`, then real key presses into `QuickDuel.exe`). In that source both New Game and Versus
+(`tools/build.ps1`, then real key presses into `QuickDuel.exe`). In that source both New Game and Versus
 fade straight from `mainmenu` to `gamescreen`; character select was already bypassed.
 
 | Room | What it did | In QuickDuel |

@@ -56,7 +56,7 @@ every push and, when the Unity license secrets are set, the EditMode and PlayMod
 Build the Windows player to `Build/QuickDuel/QuickDuel.exe` (exits non-zero on failure):
 
 ```
-powershell -File run.ps1
+powershell -File tools/build.ps1
 ```
 
 Launch a playable build for development (builds it first if `Build/QuickDuel/QuickDuel.exe` is missing;
@@ -82,7 +82,7 @@ makes the player profile's settings report sound muted for that run only, and `S
 listener. The player's saved `settings.json` is never written, so the next normal launch has sound. A
 profile whose own settings mute sound effects is honoured the same way; otherwise the game plays at the profile's
 sound-effect volume, the one a player keeps across every MindAttic game. The `-batchmode` runs in
-`run.ps1` and the tests play nothing audible and don't need it.
+`tools/build.ps1` and the tests play nothing audible and don't need it.
 
 ## Controls
 

@@ -358,7 +358,7 @@ live in [USER_STORIES.md](USER_STORIES.md) (generated — never hand-edited, see
   - **Human floor, 100 ms**: the original has none (it ran locally); the rebuild's own, for online reports only.
   - **Strike timeout 3 s, settle window 50 ms, online report grace 2 s**: the rebuild's own, for timestamped
     and online input; the original has no equivalent.
-- ✅ Standalone Windows build with `run.ps1` (UQD-T11).
+- ✅ Standalone Windows build with `tools/build.ps1` (UQD-T11).
 - ✅ Docs site on GitHub Pages via the shared pipeline (UQD-T10).
 - ✅ Online PvP protocol and transport over Unity.Multiplayer, per [§4.4](#UQD-§4.4) (UQD-T14):
   `OnlineDuelTests` in Core.Tests, and host + client PlayMode tests in `Tests/Online`.
@@ -373,7 +373,7 @@ live in [USER_STORIES.md](USER_STORIES.md) (generated — never hand-edited, see
   sprites or 2D lights, only UI, so the 2D renderer is not needed) and assigns it as the default
   pipeline and on every quality level. The pipeline-agnostic layer is the whole game: `DuelView` draws
   only a UI Toolkit tree (UQD-T31) over a camera backdrop; no shader or material in the repo names URP.
-  Verified by a Windows Standalone build (`run.ps1`) that launches and renders the Duel scene.
+  Verified by a Windows Standalone build (`tools/build.ps1`) that launches and renders the Duel scene.
 - ✅ Session and match flow moved to Core (UQD-T30, `MatchSessionTests`): `MatchSession` is now the one
   authority over the round, mode and match, with `Strike`/`BeginRound`/`SetMode` each carrying a player id
   (§4.3); `DuelController` and `DuelSession` are thin Unity views over it, covered by the existing PlayMode
@@ -792,7 +792,7 @@ live in [USER_STORIES.md](USER_STORIES.md) (generated — never hand-edited, see
   drawn-scene tests unless `QUICKDUEL_ALLOW_NO_GRAPHICS=1`.
 - ✅ Unity CI (UQD-T52): `.github/workflows/ci.yml` keeps the fast `dotnet test Core.slnx` job and adds a GameCI job that
   runs the EditMode and PlayMode suites and builds the Windows player through `QuickDuelBuild.BuildWindows` (the entry
-  point `run.ps1` uses). It is gated on the `UNITY_LICENSE` (or `UNITY_SERIAL`, `UNITY_EMAIL`, `UNITY_PASSWORD`)
+  point `tools/build.ps1` uses). It is gated on the `UNITY_LICENSE` (or `UNITY_SERIAL`, `UNITY_EMAIL`, `UNITY_PASSWORD`)
   secrets and skips cleanly, not failing, when they are absent.
 - ✅ A silent CLI launch (UQD-T61, `SessionAudioTests`): `play.ps1` launches muted (`MINDATTIC_CLI_MUTED=1`, `-muted`;
   `-Sound` opts out); `SessionAudio` silences the listener when the shared profile reports sound muted, and the saved
