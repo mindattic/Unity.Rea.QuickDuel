@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Unity.Rea.QuickDuel.Core;
+using Unity.Shared.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -114,6 +115,13 @@ namespace Unity.Rea.QuickDuel
             Scene = new IntroScene(story, random);
             Build();
             Begin();
+            // --headless (UQD-T97): nobody can click through the intro, so skip it into the main menu.
+            Headless.WhenActive(() =>
+            {
+                if (this == null) return;
+                Debug.Log("QuickDuel: headless, skipping the intro.");
+                Skip();
+            });
         }
 
         // Starts the room over from the clock's reading now: new clouds, no text, spr_loading1 full and fading out.

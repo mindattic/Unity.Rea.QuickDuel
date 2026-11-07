@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Unity.Rea.QuickDuel.Core;
+using Unity.Shared.Core;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -210,7 +211,19 @@ namespace Unity.Rea.QuickDuel
             cancel.Dispose();
         }
 
-        private void Start() => Begin();
+        private void Start()
+        {
+            Begin();
+            // --headless (UQD-T97): nobody can click the menu, so press New Game (the computer at the saved difficulty).
+            Headless.WhenActive(() =>
+            {
+                var newGame = this != null && Menu != null ? Menu.Button(MenuButtonKind.NewGame) : null;
+                if (newGame == null) return;
+                Debug.Log("QuickDuel: headless, pressing New Game.");
+                Menu.PointAt(newGame.X, newGame.Y);
+                Menu.Activate();
+            });
+        }
 
         // Starts the room over from the clock's reading now: nothing under the pointer, and the image the intro left
         // (fade_asset; spr_loading1 when the menu is loaded on its own) full and fading out.

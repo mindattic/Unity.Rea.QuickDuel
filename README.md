@@ -66,6 +66,14 @@ Launch a playable build for development (builds it first if `Build/QuickDuel/Qui
 powershell -File play.ps1
 ```
 
+### Headless launches
+
+`powershell -File play.ps1 -Headless` runs the built player with no window for scripted testing (UQD-T97): it goes through
+`..\Unity.Shared\tools\Start-Headless.ps1` (`--headless -batchmode -nographics`: muted, in the background) and waits for the
+`MINDATTIC_HEADLESS_READY` line in `Logs/play.log`. With the flag on, the game skips the intro and presses New Game on the
+main menu, so it lands in a normal duel against the computer; without it nothing changes. The player keeps running afterwards;
+stop it yourself. See Unity.Shared's README, "Headless mode".
+
 ### Muted launches
 
 `play.ps1` launches muted: it sets `MINDATTIC_CLI_MUTED=1` and passes `-muted`, so a CLI or agent starting
